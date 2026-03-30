@@ -1,12 +1,37 @@
 {
-  "name": "Movix",
-  "author": { "name": "KROOKZMANE", "id": "1407771794470862922" },
-  "description": { "en": "Watch movies on Movix" },
-  "url": "movix.rodeo",
-  "version": "1.0.0",
+  "apiVersion": 1,
+  "author": {
+    "name": "KROOKZMANE & MysticSaba",
+    "id": "1407771794470862922"
+  },
+  "service": "Movix",
+  "description": {
+    "fr": "Affiche une presence Discord detaillee et un peu absurde pendant la navigation sur Movix.",
+    "en": "Shows a detailed and slightly absurd Discord presence while browsing Movix."
+  },
+  "url": ["movix.rodeo", "movix.website", "movix.blog"],
+  "version": "1.1.0",
   "logo": "https://movix.rodeo/logo.png",
   "thumbnail": "https://movix.rodeo/logo.png",
-  "color": "#ff0000",
-  "category": "video",
-  "regExp": "movix\\.rodeo"
+  "color": "#dc2626",
+  "category": "videos",
+  "tags": ["movies", "series", "anime", "watchparty", "streaming"],
+  "regExp": "([a-z0-9-]+[.])*(movix[.](?:rodeo|website|blog))[/]?",
+  "allowURLOverrides": true,
+  "settings": [
+    {
+      "id": "showTimestamp",
+      "title": "Afficher le temps",
+      "icon": "fas fa-clock",
+      "value": true,
+      "description": "Affiche le temps passe sur une page ou la duree media quand elle est disponible."
+    },
+    {
+      "id": "showButtons",
+      "title": "Afficher le bouton",
+      "icon": "fas fa-link",
+      "value": false,
+      "description": "Ajoute un bouton vers certaines pages profondes quand l URL est en HTTPS."
+    }
+  ]
 }
