@@ -31,7 +31,7 @@ interface PresenceInstance {
 declare const Presence: new (options: { clientId: string }) => PresenceInstance;
 
 const presence = new Presence({
-  clientId: "1428803585109655733",
+  clientId: "1259926474174238741",
 });
 
 const ActivityType = {
@@ -925,11 +925,10 @@ function createPagePresence(
 ) {
   const presenceData = buildBasePresence(image);
   const seed = `${document.location.pathname}${document.location.search}`;
-  const routeDetails =
-    Array.isArray(details)
-      ? details
-      : findVariantsForPath(document.location.pathname, PAGE_DETAIL_VARIANTS) ||
-        details;
+  const routeDetails = Array.isArray(details)
+    ? details
+    : findVariantsForPath(document.location.pathname, PAGE_DETAIL_VARIANTS) ||
+      details;
 
   presenceData.details = resolveVariantText(routeDetails, `${seed}:details`);
   presenceData.state = resolveVariantText(state, `${seed}:state`);
@@ -955,22 +954,28 @@ function createWatchingPresence(options: {
   const waitingText = resolveVariantText(
     Array.isArray(options.waitingText)
       ? options.waitingText
-      : findVariantsForPath(document.location.pathname, WATCH_WAITING_VARIANTS) ||
-          options.waitingText,
+      : findVariantsForPath(
+          document.location.pathname,
+          WATCH_WAITING_VARIANTS,
+        ) || options.waitingText,
     `${seed}:waiting`,
   );
   const playingText = resolveVariantText(
     Array.isArray(options.playingText)
       ? options.playingText
-      : findVariantsForPath(document.location.pathname, WATCH_PLAYING_VARIANTS) ||
-          options.playingText,
+      : findVariantsForPath(
+          document.location.pathname,
+          WATCH_PLAYING_VARIANTS,
+        ) || options.playingText,
     `${seed}:playing`,
   );
   const pausedText = resolveVariantText(
     Array.isArray(options.pausedText)
       ? options.pausedText
-      : findVariantsForPath(document.location.pathname, WATCH_PAUSED_VARIANTS) ||
-          options.pausedText,
+      : findVariantsForPath(
+          document.location.pathname,
+          WATCH_PAUSED_VARIANTS,
+        ) || options.pausedText,
     `${seed}:paused`,
   );
   const endedText = resolveVariantText(
