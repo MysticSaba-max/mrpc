@@ -1,0 +1,12 @@
+{
+  "name": "Movix",
+  "author": { "name": "KROOKZMANE", "id": "1407771794470862922" },
+  "description": { "en": "Watch movies on Movix" },
+  "url": "movix.rodeo",
+  "version": "1.0.0",
+  "logo": "https://movix.rodeo/logo.png",
+  "thumbnail": "https://movix.rodeo/logo.png",
+  "color": "#ff0000",
+  "category": "video",
+  "regExp": "movix\\.rodeo"
+}
